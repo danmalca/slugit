@@ -1,0 +1,2 @@
+module SlugitHelper
+end

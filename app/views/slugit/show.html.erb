@@ -1,0 +1,24 @@
+<h1>Slug It!</h1>
+
+<form action="<%= slugit_path %>" method="get">
+  <input class="original" name="original" type="text" />
+  <button data-disable-with="slugging..." name="" type="submit">Slug It</button>
+</form>
+
+<%= form_for :slug, :remote => true, :html => { :'data-type' => 'json', :id => 'slugit_form' } do |f| %>
+  <%= f.text_field (:in) %>
+
+  <%= f.submit ("SlugIt Ajax") %>
+<% end %>
+<div id="errors"></div>
+
+<div id="result">
+  <h3>	
+  <% unless @slug.nil? or @slug.out.nil? %>
+    <%= @slug.out %>
+  <% end %>
+  </h3>
+</div>
+
+
+
