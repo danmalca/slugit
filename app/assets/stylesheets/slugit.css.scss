@@ -1,3 +1,13 @@
-// Place all the styles related to the Slugit controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-cont {
+    margin-top: 10px;
+}
+
+.form-cont form {
+    float:left;
+    margin-right: 4px;
+}
+
+#input-slug {
+    font-size: 20px;
+    height: 28px;
+}
