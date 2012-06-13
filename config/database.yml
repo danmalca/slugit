@@ -18,7 +18,7 @@ development:
   database: slugit_development
   pool: 5
   username: slugit
-  password: abcde
+  password: <%= ENV['SLUGIT_DB_PASS'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -44,7 +44,7 @@ test:
   database: slugit_test
   pool: 5
   username: slugit
-  password: abcde
+  password: <%= ENV['SLUGIT_DB_PASS'] %>
 
 production:
   adapter: postgresql
@@ -52,4 +52,4 @@ production:
   database: slugit_production
   pool: 5
   username: slugit
-  password:
+  password: <%= ENV['SLUGIT_DB_PASS'] %>
